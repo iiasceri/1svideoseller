@@ -1,0 +1,35 @@
+video-snippets/
+├── backend/
+│   ├── src/
+│   │   ├── controllers/
+│   │   │   ├── videoController.js
+│   │   │   ├── paymentController.js
+│   │   │   └── adminController.js
+│   │   ├── services/
+│   │   │   ├── videoProcessingService.js
+│   │   │   ├── contentFilteringService.js
+│   │   │   ├── paymentService.js
+│   │   │   └── mergeService.js
+│   │   ├── models/
+│   │   │   ├── Video.js
+│   │   │   ├── User.js
+│   │   │   ├── Payment.js
+│   │   │   └── Settings.js
+│   │   ├── middleware/
+│   │   │   ├── auth.js
+│   │   │   ├── upload.js
+│   │   │   └── contentFilter.js
+│   │   ├── routes/
+│   │   │   ├── videoRoutes.js
+│   │   │   ├── paymentRoutes.js
+│   │   │   └── adminRoutes.js
+│   │   └── utils/
+│   │       ├── validators.js
+│   │       └── helpers.js
+│   ├── package.json
+│   ├── node_modules/
+│   │   ├── archiver/
+│   │   ├── express/
+│   │   ├── mongoose/
+│   │   └── ...
+│   └── ... 

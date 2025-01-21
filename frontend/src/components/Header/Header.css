@@ -1,0 +1,87 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #343a40;
+  color: white;
+  padding: 0.3rem 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 40px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.header nav {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+  padding: 4px 8px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.header a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.header button {
+  background: none;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  border-radius: 4px;
+}
+
+.header button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.logout-button {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.logout-button:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.nav-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.nav-group a,
+.nav-group button {
+  padding: 2px 6px;
+  font-size: 0.85rem;
+}
+
+.nav-group .logout-button {
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+} 

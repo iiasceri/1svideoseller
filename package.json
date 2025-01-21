@@ -1,0 +1,17 @@
+{
+  "name": "video-snippets",
+  "version": "1.0.0",
+  "description": "1-second video management platform",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "setup-admin": "node scripts/setupAdmin.js",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5"
+  }
+}
