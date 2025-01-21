@@ -49,7 +49,7 @@ class VideoController {
       await fs.mkdir(uploadsDir, { recursive: true });
       
       // Move the processed file to uploads directory
-      await fs.rename(processedFilename, finalPath);
+      await fs.rename(req.file.path, finalPath);
 
       // Verify the final file
       const finalStats = await fs.stat(finalPath);
@@ -59,10 +59,10 @@ class VideoController {
       });
 
       const video = new Video({
-        filename: finalPath,
+        filename: processedFilename,
         originalname: req.file.originalname,
-        path: finalPath,
-        size: finalStats.size,
+        path: path.join(__dirname, '../../uploads', processedFilename),
+        size: req.file.size,
         mimetype: 'video/mp4',
         status: 'ready',
         userId: req.user._id,
@@ -72,9 +72,6 @@ class VideoController {
       });
       
       await video.save();
-
-      // Clean up the original uploaded file
-      await fs.unlink(req.file.path);
 
       res.status(200).json({ 
         success: true, 
